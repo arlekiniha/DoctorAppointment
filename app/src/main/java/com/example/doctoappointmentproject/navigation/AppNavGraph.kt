@@ -5,6 +5,7 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import com.example.doctoappointmentproject.core.viewModel.MainViewModel
+import com.example.doctoappointmentproject.navigation.routes.detailRoute
 import com.example.doctoappointmentproject.navigation.routes.homeRoute
 import com.example.doctoappointmentproject.navigation.routes.introRoute
 
@@ -26,5 +27,10 @@ fun AppNavGraph(
         )
 
         homeRoute(vm = vm)
+
+        detailRoute(
+            nav = nav,
+            onBack = {nav.popBackStack()}
+        )
     }
 }

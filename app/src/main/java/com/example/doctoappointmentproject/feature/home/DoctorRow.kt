@@ -137,6 +137,7 @@ fun DoctorRow(
     modifier: Modifier = Modifier
 ) {
     Box(Modifier
+        .padding(top = 16.dp)
         .fillMaxWidth()
         .heightIn(min = 260.dp)) {
         if (items.isEmpty()) {
